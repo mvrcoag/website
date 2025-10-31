@@ -137,8 +137,19 @@ export default function Personal() {
       >
         <div className="flex-1">
           <p className="text-zinc-600 dark:text-zinc-400">
-            Focused on creating intuitive and performant web experiences.
-            Bridging the gap between design and development.
+            I define my work as <i>turning ideas into reality</i>. I believe
+            coding is more than a simple skill: it's a form of art.
+          </p>
+          <br />
+          <p className="text-zinc-600 dark:text-zinc-400">
+            The process of taking an abstract idea and bringing it to life with
+            the potential to reach millions of users is what made me fall in
+            love with code.
+          </p>
+          <br />
+          <p className="text-zinc-600 dark:text-zinc-400">
+            I enjoy creating and promoting open-source software, hitting the gym
+            in the mornings, and reading about philosophy and politics.
           </p>
         </div>
       </motion.section>
@@ -150,10 +161,12 @@ export default function Personal() {
         <h3 className="mb-5 text-lg font-medium">Selected Projects</h3>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           {PROJECTS.map((project) => (
-            <div key={project.name} className="space-y-2">
-              <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
-                <ProjectVideo src={project.video} />
-              </div>
+            <div key={project.name} className="my-4 space-y-2">
+              {project.video && (
+                <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
+                  <ProjectVideo src={project.video} />
+                </div>
+              )}
               <div className="px-1">
                 <a
                   className="font-base group relative inline-block font-[450] text-zinc-900 dark:text-zinc-50"
@@ -161,7 +174,7 @@ export default function Personal() {
                   target="_blank"
                 >
                   {project.name}
-                  <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-zinc-900 dark:bg-zinc-50 transition-all duration-200 group-hover:max-w-full"></span>
+                  <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-zinc-900 transition-all duration-200 group-hover:max-w-full dark:bg-zinc-50"></span>
                 </a>
                 <p className="text-base text-zinc-600 dark:text-zinc-400">
                   {project.description}
@@ -243,6 +256,11 @@ export default function Personal() {
               </Link>
             ))}
           </AnimatedBackground>
+          {BLOG_POSTS.length === 0 && (
+            <h4 className="font-normal text-zinc-500 dark:text-zinc-400">
+              There are not posts yet.
+            </h4>
+          )}
         </div>
       </motion.section>
 

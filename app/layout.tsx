@@ -12,16 +12,16 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://nim-fawn.vercel.app/'),
+  metadataBase: new URL('https://mvrcoag.com/'),
   alternates: {
-    canonical: '/'
+    canonical: '/',
   },
   title: {
-    default: 'Nim - Personal website template',
-    template: '%s | Nim'
+    default: 'Marco A. García - Personal website',
+    template: '%s | Marco A. García',
   },
-  description:  'Nim is a free and open-source personal website template built with Next.js 15, React 19 and Motion-Primitives.',
-};
+  description: 'Marco A. García, Full-Stack Developer & Data Scientist.',
+}
 
 const geist = Geist({
   variable: '--font-geist',
