@@ -37,7 +37,7 @@ export const PROJECTS: Project[] = [
   },
   {
     name: 'Go Interpreter',
-    description: 'A dynamic interpreter writen in Go.',
+    description: 'A dynamic type interpreter writen in Go.',
     link: 'https://github.com/mvrcoag/golang-interpreter',
     id: 'project2',
   },
